@@ -102,9 +102,7 @@ This tool simplifies the process by handling most of the steps, allowing you to 
     }
     ```
 
-    The `Transfer` method is a helper that copies data into a `BlobArray`. Here, it copies the `combatData` of each of the `UnitConfigAsset` to the `combatDataArray` defined in the `UnitConfigBlob`.
-
-    Similarly, you can use `TransferString` to copy `string` data.
+    The `Transfer` method is a helper that copies data into a `BlobArray`. Similarly, you can use `TransferString` to copy `string` data.
     ```c#
     TransferString(ref BlobArray<BlobString> blobArray, ref BlobBuilder builder, Func<TAsset, string> func)
     ```
