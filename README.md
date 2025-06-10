@@ -95,7 +95,9 @@ This tool simplifies the process by handling most of the steps, allowing you to 
         // Copy data from the loaded ScriptableObject assets to the blob arrays.
         protected override void TransferData<AUnitConfig>(ref UnitConfigBlob blob, ref BlobBuilder builder, Baker<AUnitConfig> baker)
         {
-            Transfer(ref blob.combatData, ref builder, (asset) => asset.combatData);
+            Transfer(ref blob.combatDataArray, ref builder, (asset) => asset.combatData);
+            Transfer(ref blob.moveDataArray, ref builder, (asset) => asset.moveData);
+            ...
         }
     }
     ```
